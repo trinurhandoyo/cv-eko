@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Eko Setiawan, Professional Bakery Chef & Store Manager with experience in bakery operations, production, and store leadership.">
+    <title>Eko Setiawan | Bakery Chef & Store Manager</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        burgundy: {
+                            950: '#0a0304',
+                            900: '#140608',
+                            800: '#230b0e',
+                            700: '#3d1016',
+                            600: '#631621',
+                            500: '#8c1c2b',
+                            400: '#b82537',
+                            300: '#d94154'
+                        },
+                        amber: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Ambient radial lighting matching the reference UI */
+        .ambient-bg {
+            background: radial-gradient(circle at 50% 38%, rgba(140, 28, 43, 0.48) 0%, rgba(35, 11, 14, 0.96) 55%, #0a0304 100%);
+        }
+        
+        /* Glowing neon text effect for giant background typography */
+        .text-glow {
+            text-shadow: 0 0 45px rgba(255, 255, 255, 0.55), 0 0 18px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Subtle dark grid background texture */
+        .grid-pattern {
+            background-size: 48px 48px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+        }
+
+        /* Glassmorphism card backdrop */
+        .glass-card {
+            background: rgba(35, 11, 14, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-card-hover {
+            transition: all 0.3s ease;
+        }
+        .glass-card-hover:hover {
+            background: rgba(61, 16, 22, 0.7);
+            border-color: rgba(239, 68, 68, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .hero-portrait {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            object-fit: contain;
+            object-position: center bottom;
+            max-width: 500px;
+            filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.7));
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0304;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3d1016;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #631621;
+        }
+    </style>
+</head>
+<body class="bg-[#0a0304] text-white font-sans overflow-x-hidden min-h-screen flex flex-col justify-between select-none">
+
+    <!-- Ambient Background Effects -->
+    <div class="fixed inset-0 ambient-bg z-0 pointer-events-none"></div>
+    <div class="fixed inset-0 grid-pattern z-0 opacity-75 pointer-events-none"></div>
+
+    <!-- MAIN WRAPPER -->
+    <div class="relative z-10 flex flex-col min-h-screen max-w-[1440px] mx-auto w-full px-5 md:px-10 lg:px-14">
+
+        <!-- NAVBAR -->
+        <header class="flex items-center justify-between py-5">
+            <!-- Left: Profile Branding -->
+            <a href="#hero" class="flex items-center space-x-3 group">
+                <div class="relative w-11 h-11 rounded-full overflow-hidden border-2 border-amber-500/60 shadow-lg group-hover:border-amber-400 transition-all duration-300 bg-transparent">
+                    <img src="Foto_Eko_Setiawan-removebg-preview.png" alt="Eko Setiawan" class="w-full h-full object-cover object-center bg-transparent" />
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-bold text-base sm:text-lg tracking-wide text-gray-100 group-hover:text-amber-400 transition-colors leading-tight">
+                        Eko Setiawan
+                    </span>
+                    <span class="text-[11px] text-amber-500 font-medium tracking-wider uppercase">Bakery Chef & Store Manager</span>
+                </div>
+            </a>
+
+            <!-- Middle: Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                <a href="#hero" class="hover:text-amber-400 transition-colors duration-200">Home</a>
+                <a href="#experience" class="hover:text-amber-400 transition-colors duration-200">Experience</a>
+                <a href="#skills" class="hover:text-amber-400 transition-colors duration-200">Expertise</a>
+                <a href="#contact" class="hover:text-amber-400 transition-colors duration-200">Contact</a>
+            </nav>
+
+            <!-- Right: Let's Talk CTA Button -->
+            <div class="flex items-center">
+                <a href="https://wa.me/6285392073875" target="_blank" class="bg-white text-gray-950 px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm flex items-center shadow-lg hover:bg-amber-400 hover:text-gray-950 transition-all duration-200 active:scale-95">
+                    Let's Talk <span class="ml-2 font-black text-xs">↗</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="relative flex-1 flex flex-col justify-between items-center my-2 md:my-0 min-h-[calc(100vh-100px)]">
+            
+            <!-- Grid Accents (+ symbols) -->
+            <div class="absolute top-6 left-4 text-white/20 hidden md:block text-2xl font-light">+</div>
+            <div class="absolute top-6 right-4 text-white/20 hidden md:block text-2xl font-light">+</div>
+
+            <!-- Giant Background Typography (BAKERY CHEF) -->
+            <div class="w-full text-center my-auto pt-6 pb-20 select-none relative z-0">
+                <!-- Subtitle overlay -->
+                <p class="text-xs sm:text-sm md:text-base tracking-[0.45em] font-bold text-amber-400/90 uppercase mb-2 drop-shadow-md">
+                    PROFESSIONAL
+                </p>
+                <!-- Giant Glowing Headline -->
+                <h1 class="text-5xl sm:text-7xl md:text-[105px] lg:text-[145px] xl:text-[170px] font-black tracking-tighter leading-none text-white text-glow uppercase">
+                    BAKERY CHEF
+                </h1>
+                
+                <!-- Glowing Shelf Line -->
+                <div class="w-4/5 max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-amber-400/50 to-transparent mx-auto mt-[-6px] sm:mt-[-16px]"></div>
+            </div>
+
+            <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-10 w-full max-w-[300px] sm:max-w-[360px] md:max-w-[420px] lg:max-w-[470px] pointer-events-none flex justify-center">
+                <div class="relative w-full flex justify-center">
+                    <img src="Foto_Eko_Setiawan-removebg-preview.png" alt="Eko Setiawan portrait" class="hero-portrait w-auto h-[320px] sm:h-[400px] md:h-[480px] lg:h-[560px] rounded-none" />
+                </div>
+            </div>
+
+            <!-- Decorative Floating Bakery Badge / Floating Text (Right side backdrop) -->
+            <div class="absolute right-4 md:right-12 bottom-36 hidden lg:flex flex-col items-end space-y-2 pointer-events-none opacity-40 select-none text-right">
+                <span class="text-xs font-mono text-amber-400 tracking-widest">EST. 2003</span>
+                <span class="text-xs font-mono text-white/70">JESSLYN CAKES THAILAND</span>
+                <span class="text-xs font-mono text-white/70">DL BAKERY HEAD</span>
+                <span class="text-xs font-mono text-white/70">MELAWAI PAPUA</span>
+                <span class="text-xs font-mono text-amber-400/80">BANK MANDIRI COLLAB</span>
+            </div>
+
+            <!-- BOTTOM HERO CONTENT -->
+            <div class="relative z-20 w-full flex flex-col md:flex-row items-center md:items-end justify-between gap-6 pb-6 mt-auto">
+                
+                <!-- Bottom Left Text Block -->
+                <div class="max-w-md text-center md:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-full mb-2">
+                        <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                        <span class="text-[11px] font-semibold text-amber-300 uppercase tracking-wider">Store Manager & Bakery Head</span>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-2 tracking-tight">
+                        Bakery professional with 20+ years of experience
+                    </h2>
+                    <p class="text-xs sm:text-sm text-gray-300 leading-relaxed font-light">
+                        I specialize in bakery production, pastry innovation, store operations, and team leadership — helping brands deliver quality products and strong customer experience across daily operations and franchise growth.
+                    </p>
+                </div>
+
+                <!-- Bottom Right Action Buttons -->
+                <div class="flex flex-col sm:flex-row md:flex-col gap-3 w-full sm:w-auto min-w-[210px]">
+                    <!-- Download CV Button -->
+                    <a href="mailto:seko29335@gmail.com?subject=CV%20Request%20-%20Eko%20Setiawan" class="bg-gradient-to-r from-burgundy-600 to-burgundy-500 hover:from-burgundy-500 hover:to-burgundy-400 text-white font-semibold py-3 px-6 rounded-xl shadow-lg flex items-center justify-between text-sm transition-all duration-200 active:scale-95 border border-burgundy-400/40">
+                        <span>Download CV</span>
+                        <span class="font-bold text-xs ml-3">↓</span>
+                    </a>
+                    
+                    <!-- WhatsApp Contact Button -->
+                    <a href="https://wa.me/6285392073875" target="_blank" rel="noopener noreferrer" class="bg-[#190a0d]/90 hover:bg-[#2e1016] text-gray-200 font-semibold py-3 px-6 rounded-xl shadow-lg flex items-center justify-between text-sm border border-white/10 transition-all duration-200 active:scale-95">
+                        <span>Contact Me</span>
+                        <i class="fa-brands fa-whatsapp text-base ml-3 text-emerald-400"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section id="experience" class="py-20 border-t border-white/10 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-xs font-bold tracking-[0.3em] text-amber-400 uppercase">Career Track</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Pengalaman Kerja</h2>
+                <p class="text-sm text-gray-400 mt-2">Lebih dari 20 tahun pengalaman profesional di industri bakery, pastry, dan manajemen toko.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- DL Bakery -->
+                <div class="glass-card glass-card-hover p-6 rounded-2xl relative overflow-hidden group">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30">2025 - 2026</span>
+                        <i class="fa-solid font-bold fa-store text-xl text-burgundy-400 group-hover:text-amber-400 transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Store Manager & Bakery Head</h3>
+                    <h4 class="text-sm font-semibold text-amber-400 mb-3">DL Bakery</h4>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        Bertanggung jawab penuh dalam mengurus store secara keseluruhan, meliputi manajemen operasional harian toko, pengawasan tim produksi, kontrol kualitas produk, pengelolaan stok bahan baku, hingga peningkatan kepuasan pelanggan.
+                    </p>
+                </div>
+
+                <!-- Manasari Bakery -->
+                <div class="glass-card glass-card-hover p-6 rounded-2xl relative overflow-hidden group">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-white/10 text-gray-300">2023 - 2024</span>
+                        <i class="fa-solid fa-wheat-awn text-xl text-burgundy-400 group-hover:text-amber-400 transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Bakery Chef</h3>
+                    <h4 class="text-sm font-semibold text-amber-400 mb-3">Manasari Bakery</h4>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        Memproduksi beragam varian roti manis, roti tawar, dan kue berkualitas. Menjaga efisiensi proses pembuatan roti dan memastikan konsistensi cita rasa serta higienitas area dapur.
+                    </p>
+                </div>
+
+                <!-- Melawai Bakery Papua -->
+                <div class="glass-card glass-card-hover p-6 rounded-2xl relative overflow-hidden group">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-white/10 text-gray-300">2020 - 2022</span>
+                        <i class="fa-solid fa-crown text-xl text-burgundy-400 group-hover:text-amber-400 transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Head Baker</h3>
+                    <h4 class="text-sm font-semibold text-amber-400 mb-3">Melawai Bakery Papua Manokwari</h4>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        Memimpin tim produksi dalam pembuatan aneka roti dan pastry harian. Terlibat dalam event kerja sama strategis (seperti Kawalai Bakery) serta menjaga standar kepuasan konsumen daerah.
+                    </p>
+                </div>
+
+                <!-- Java Jass Solo -->
+                <div class="glass-card glass-card-hover p-6 rounded-2xl relative overflow-hidden group">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-white/10 text-gray-300">2018 - 2020</span>
+                        <i class="fa-solid fa-bread-slice text-xl text-burgundy-400 group-hover:text-amber-400 transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Baker Specialist</h3>
+                    <h4 class="text-sm font-semibold text-amber-400 mb-3">Java Jass Solo</h4>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        Mengembangkan varian resep roti baru serta memproduksi pesanan khusus dengan tingkat presisi dan cita rasa tinggi.
+                    </p>
+                </div>
+
+                <!-- Isadelli Bakery & Stellete Cakes -->
+                <div class="glass-card glass-card-hover p-6 rounded-2xl relative overflow-hidden group">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-white/10 text-gray-300">2012 - 2018</span>
+                        <i class="fa-solid fa-cake-candles text-xl text-burgundy-400 group-hover:text-amber-400 transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Pastry & Bakery Chef</h3>
+                    <h4 class="text-sm font-semibold text-amber-400 mb-3">Isadelli Bakery & Stellete Cakes</h4>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        Mengelola alur kerja pembuatan bolu, donat, dan pastry harian. Fokus pada pembuatan kue dekoratif untuk berbagai acara dan pesanan pelanggan.
+                    </p>
+                </div>
+
+                <!-- PT. Sukses Inti Boga (Jesslyn Cakes) -->
+                <div class="glass-card glass-card-hover p-6 rounded-2xl relative overflow-hidden group border-amber-500/30">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30">2003 - 2012</span>
+                        <i class="fa-solid fa-globe text-xl text-amber-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Senior Baker & Franchise Coordinator</h3>
+                    <h4 class="text-sm font-semibold text-amber-400 mb-3">PT. Sukses Inti Boga (Jesslyn Cakes)</h4>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        Memegang peranan kunci dalam operasional waralaba di <strong class="text-amber-300">Thailand</strong> serta mendukung program promosi dan kolaborasi perusahaan dengan <strong class="text-white">Bank Mandiri</strong>.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- EXPERTISE & SKILLS SECTION -->
+        <section id="skills" class="py-20 border-t border-white/10 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div>
+                    <span class="text-xs font-bold tracking-[0.3em] text-amber-400 uppercase">Core Strengths</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1 mb-4">Keahlian Spesialis</h2>
+                    <p class="text-sm text-gray-300 leading-relaxed mb-8">
+                        Memadukan kreativitas seni pembuatan kue dengan ketelitian teknik baking profesional, didukung kemampuan manajerial operasional toko yang solid.
+                    </p>
+
+                    <div class="space-y-4">
+                        <!-- Skill Item 1 -->
+                        <div class="bg-burgundy-900/60 p-4 rounded-xl border border-white/5 flex items-center space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400 font-bold">
+                                <i class="fa-solid fa-cookie"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-sm font-bold text-white">Varian Roti Manis & Roti Tawar</h4>
+                                <p class="text-xs text-gray-400">Formulasi adonan, kelembutan tekstur, dan variasi isian premium.</p>
+                            </div>
+                        </div>
+
+                        <!-- Skill Item 2 -->
+                        <div class="bg-burgundy-900/60 p-4 rounded-xl border border-white/5 flex items-center space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400 font-bold">
+                                <i class="fa-solid fa-stroopwafel"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-sm font-bold text-white">Donat & Pastry Specialist</h4>
+                                <p class="text-xs text-gray-400">Aneka bolu, croissants, dan pastry dekoratif berstandar tinggi.</p>
+                            </div>
+                        </div>
+
+                        <!-- Skill Item 3 -->
+                        <div class="bg-burgundy-900/60 p-4 rounded-xl border border-white/5 flex items-center space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400 font-bold">
+                                <i class="fa-solid fa-clipboard-check"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-sm font-bold text-white">Kontrol Standar Sanitasi & Mutu</h4>
+                                <p class="text-xs text-gray-400">Jaminan higienitas dapur dan konsistensi rasa sesuai standar keamanan pangan.</p>
+                            </div>
+                        </div>
+
+                        <!-- Skill Item 4 -->
+                        <div class="bg-burgundy-900/60 p-4 rounded-xl border border-white/5 flex items-center space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400 font-bold">
+                                <i class="fa-solid fa-shop"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-sm font-bold text-white">Manajemen Toko & Franchise</h4>
+                                <p class="text-xs text-gray-400">Pengelolaan stok, supervisi SDM, serta ekspansi waralaba (Thailand & Papua).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education & Personal Background Card -->
+                <div class="glass-card p-8 rounded-3xl relative">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-burgundy-600 flex items-center justify-center text-amber-400 text-xl font-bold shadow-inner">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Pendidikan & Info Tambahan</h3>
+                            <span class="text-xs text-amber-400 font-medium">Latar Belakang Pendidikan & Hobi</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="border-l-2 border-amber-500/40 pl-4 py-1">
+                            <h4 class="text-sm font-bold text-white">SMAN 1 Paninggaran</h4>
+                            <span class="text-xs text-gray-400">2000 - 2003</span>
+                        </div>
+                        <div class="border-l-2 border-white/20 pl-4 py-1">
+                            <h4 class="text-sm font-bold text-white">SMPN 02 Paninggaran</h4>
+                            <span class="text-xs text-gray-400">1997 - 2000</span>
+                        </div>
+                        <div class="border-l-2 border-white/20 pl-4 py-1">
+                            <h4 class="text-sm font-bold text-white">SDN 01 Tenogo</h4>
+                            <span class="text-xs text-gray-400">1991 - 1997</span>
+                        </div>
+                    </div>
+
+                    <!-- Hobi / Interests -->
+                    <div class="mt-8 pt-6 border-t border-white/10">
+                        <h4 class="text-xs font-bold text-amber-400 uppercase tracking-widest mb-3">Hobi & Olahraga</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-white/5 border border-white/10 text-xs px-3.5 py-1.5 rounded-full text-gray-300 flex items-center">
+                                <i class="fa-solid fa-futbol text-amber-400 mr-2"></i> Bermain Sepak Bola
+                            </span>
+                            <span class="bg-white/5 border border-white/10 text-xs px-3.5 py-1.5 rounded-full text-gray-300 flex items-center">
+                                <i class="fa-solid fa-person-running text-amber-400 mr-2"></i> Berolahraga
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="py-20 border-t border-white/10 relative z-10">
+            <div class="glass-card p-8 md:p-12 rounded-3xl max-w-4xl mx-auto border-amber-500/20">
+                <div class="text-center max-w-xl mx-auto mb-10">
+                    <span class="text-xs font-bold tracking-[0.3em] text-amber-400 uppercase">Get In Touch</span>
+                    <h2 class="text-3xl font-extrabold text-white mt-1">Hubungi Eko Setiawan</h2>
+                    <p class="text-xs sm:text-sm text-gray-300 mt-2">
+                        Siap berkontribusi untuk posisi Store Manager, Bakery Head, Konsultasi Menu, atau Pengembangan Franchise Bakery Anda.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <!-- Phone / WhatsApp -->
+                    <a href="https://wa.me/6285392073875" target="_blank" class="bg-burgundy-900/80 hover:bg-burgundy-800 p-6 rounded-2xl border border-white/10 transition-all duration-200 group">
+                        <div class="w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 mx-auto flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <h4 class="text-xs text-gray-400 uppercase tracking-wider font-semibold">No. Telepon / WA</h4>
+                        <p class="text-sm font-bold text-white mt-1">085392073875</p>
+                    </a>
+
+                    <!-- Email -->
+                    <a href="mailto:seko29335@gmail.com" class="bg-burgundy-900/80 hover:bg-burgundy-800 p-6 rounded-2xl border border-white/10 transition-all duration-200 group">
+                        <div class="w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 mx-auto flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <h4 class="text-xs text-gray-400 uppercase tracking-wider font-semibold">Email</h4>
+                        <p class="text-sm font-bold text-white mt-1 break-all">seko29335@gmail.com</p>
+                    </a>
+
+                    <!-- Address -->
+                    <div class="bg-burgundy-900/80 p-6 rounded-2xl border border-white/10">
+                        <div class="w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 mx-auto flex items-center justify-center text-xl mb-3">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <h4 class="text-xs text-gray-400 uppercase tracking-wider font-semibold">Alamat Domisili</h4>
+                        <p class="text-xs font-bold text-white mt-1 leading-snug">
+                            Desa Tenogo, Kec. Paninggaran, Kab. Pekalongan, Jawa Tengah 51164
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-10 text-center">
+                    <a href="https://wa.me/6285392073875?text=Halo%20Chef%20Eko%20Setiawan,%20saya%20tertarik%20untuk%20berdiskusi%20mengenai%20kesempatan%20kerja/kerjasama." target="_blank" class="inline-flex items-center space-x-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-gray-950 font-extrabold px-8 py-3.5 rounded-xl shadow-xl transition-all duration-200 transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Kirim Pesan WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="py-8 border-t border-white/5 text-center text-xs text-gray-500 flex flex-col sm:flex-row items-center justify-between">
+            <p>© <span id="year"></span> Eko Setiawan. Professional Bakery Chef & Store Manager.</p>
+            <p class="mt-2 sm:mt-0">Design UI based on High-End Burgundy Aesthetic.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
